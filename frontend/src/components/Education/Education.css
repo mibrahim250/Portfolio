@@ -1,0 +1,256 @@
+.education {
+  background: var(--bg-primary);
+  position: relative;
+}
+
+.education::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: radial-gradient(circle at 70% 30%, rgba(255, 107, 53, 0.05) 0%, transparent 50%);
+  pointer-events: none;
+}
+
+.education-content {
+  position: relative;
+  z-index: 1;
+}
+
+.education-timeline {
+  position: relative;
+  margin-bottom: 4rem;
+}
+
+.education-timeline::before {
+  content: '';
+  position: absolute;
+  left: 50%;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: linear-gradient(to bottom, var(--accent-primary), var(--accent-secondary));
+  transform: translateX(-50%);
+}
+
+.education-item {
+  position: relative;
+  margin-bottom: 3rem;
+}
+
+.timeline-marker {
+  position: absolute;
+  left: 50%;
+  top: 2rem;
+  width: 20px;
+  height: 20px;
+  background: var(--accent-primary);
+  border: 4px solid var(--bg-primary);
+  border-radius: 50%;
+  transform: translateX(-50%);
+  z-index: 2;
+}
+
+.education-card {
+  width: calc(50% - 3rem);
+  margin-left: auto;
+  position: relative;
+}
+
+.education-item:nth-child(odd) .education-card {
+  margin-left: 0;
+  margin-right: auto;
+}
+
+.education-header {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.education-icon {
+  width: 50px;
+  height: 50px;
+  background: linear-gradient(135deg, var(--accent-primary), var(--accent-secondary));
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 1.2rem;
+  flex-shrink: 0;
+}
+
+.education-info h3 {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: 0.5rem;
+}
+
+.institution {
+  font-size: 1.1rem;
+  color: var(--accent-primary);
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+}
+
+.education-meta {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+}
+
+.education-meta span {
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+}
+
+.education-description {
+  color: var(--text-secondary);
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+}
+
+.achievements h4 {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: 0.5rem;
+}
+
+.achievements ul {
+  list-style: none;
+  padding: 0;
+}
+
+.achievements li {
+  color: var(--text-secondary);
+  padding: 0.3rem 0;
+  position: relative;
+  padding-left: 1.5rem;
+}
+
+.achievements li::before {
+  content: '▸';
+  position: absolute;
+  left: 0;
+  color: var(--accent-primary);
+  font-weight: bold;
+}
+
+.certifications-section {
+  margin-top: 4rem;
+}
+
+.certifications-title {
+  font-size: 2rem;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 2rem;
+  color: var(--text-primary);
+}
+
+.certifications-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+.certification-card {
+  padding: 2rem;
+}
+
+.certification-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 1rem;
+}
+
+.certification-header h4 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin: 0;
+}
+
+.certification-date {
+  background: var(--accent-primary);
+  color: white;
+  padding: 0.3rem 0.8rem;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 500;
+}
+
+.certification-issuer {
+  color: var(--accent-primary);
+  font-weight: 500;
+  margin-bottom: 1rem;
+}
+
+.certification-description {
+  color: var(--text-secondary);
+  line-height: 1.6;
+}
+
+@media (max-width: 768px) {
+  .education-timeline::before {
+    left: 2rem;
+  }
+  
+  .timeline-marker {
+    left: 2rem;
+  }
+  
+  .education-card {
+    width: calc(100% - 4rem);
+    margin-left: 4rem !important;
+    margin-right: 0 !important;
+  }
+  
+  .education-meta {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  
+  .certifications-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .certification-header {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .education-card {
+    width: calc(100% - 3rem);
+    margin-left: 3rem !important;
+  }
+  
+  .timeline-marker {
+    left: 1.5rem;
+  }
+  
+  .education-timeline::before {
+    left: 1.5rem;
+  }
+  
+  .education-header {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .education-icon {
+    align-self: center;
+  }
+}
