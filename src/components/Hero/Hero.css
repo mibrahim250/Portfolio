@@ -99,8 +99,8 @@
 
 .hero-image {
   display: flex;
-  justify-content: center;
-  align-items: center;
+  justify-content: flex-start;
+  align-items: flex-end;
 }
 
 .profile-image-container {
