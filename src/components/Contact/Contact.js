@@ -15,8 +15,8 @@ const Contact = () => {
     {
       icon: <FaLinkedin />,
       title: "LinkedIn",
-      value: "linkedin.com/in/yourusername",
-      link: "https://linkedin.com/in/yourusername",
+      value: "linkedin.com/in/ibrahi12",
+      link: "https://www.linkedin.com/in/ibrahi12",
       description: "Connect with me on LinkedIn to stay updated with my professional journey."
     },
     {
@@ -38,7 +38,7 @@ const Contact = () => {
     {
       icon: <FaLinkedin />,
       name: "LinkedIn",
-      url: "https://linkedin.com/in/yourusername",
+      url: "https://www.linkedin.com/in/ibrahi12",
       color: "#0077B5"
     },
     {
@@ -52,18 +52,7 @@ const Contact = () => {
   return (
     <section id="contact" className="contact">
       <div className="container">
-        <motion.div
-          className="section-header"
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-          viewport={{ once: true }}
-        >
-          <h2 className="section-title">Get In Touch</h2>
-          <p className="section-subtitle">
-            I'm always open to discussing new opportunities, interesting projects, or just having a chat about technology.
-          </p>
-        </motion.div>
+
 
         <div className="contact-content">
           <motion.div
@@ -101,29 +90,7 @@ const Contact = () => {
             </div>
           </motion.div>
 
-          <motion.div
-            className="contact-message"
-            initial={{ opacity: 0, x: 50 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.6, delay: 0.4 }}
-            viewport={{ once: true }}
-          >
-            <div className="message-card card">
-              <h3>Let's Work Together</h3>
-              <p>
-                I'm passionate about creating innovative solutions and turning ideas into reality. 
-                Whether you have a project in mind, want to discuss potential collaborations, 
-                or just want to say hello, I'd love to hear from you.
-              </p>
-              <p>
-                I'm currently available for freelance opportunities and full-time positions. 
-                Feel free to reach out through any of the contact methods above.
-              </p>
-              <div className="availability">
-                <span className="status available">Available for opportunities</span>
-              </div>
-            </div>
-          </motion.div>
+
         </div>
 
         <motion.div
@@ -155,18 +122,7 @@ const Contact = () => {
           </div>
         </motion.div>
 
-        <motion.div
-          className="contact-footer"
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.8 }}
-          viewport={{ once: true }}
-        >
-          <p>
-            Thank you for visiting my portfolio! I look forward to connecting with you and 
-            exploring potential opportunities to work together.
-          </p>
-        </motion.div>
+
       </div>
     </section>
   );

@@ -103,48 +103,29 @@
   align-items: center;
 }
 
-.profile-image-placeholder {
+.profile-image-container {
   width: 350px;
   height: 350px;
-  background: var(--bg-secondary);
-  border: 3px dashed var(--accent-primary);
-  border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
   position: relative;
-  overflow: hidden;
-}
-
-.profile-image-placeholder::before {
-  content: '';
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 200px;
-  height: 200px;
-  background: linear-gradient(135deg, var(--accent-primary), var(--accent-secondary));
   border-radius: 50%;
-  transform: translate(-50%, -50%);
-  opacity: 0.1;
+  overflow: hidden;
+  border: 4px solid var(--accent-primary);
+  box-shadow: var(--shadow-hover);
 }
 
-.placeholder-text {
-  text-align: center;
-  color: var(--text-secondary);
-  z-index: 1;
+.profile-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+  transition: transform 0.3s ease;
 }
 
-.placeholder-text span {
-  display: block;
-  font-size: 1.2rem;
-  font-weight: 600;
-  margin-bottom: 0.5rem;
-}
-
-.placeholder-text small {
-  font-size: 0.9rem;
-  opacity: 0.7;
+.profile-image:hover {
+  transform: scale(1.05);
 }
 
 .scroll-indicator {
@@ -182,7 +163,7 @@
     max-width: 100%;
   }
   
-  .profile-image-placeholder {
+  .profile-image-container {
     width: 280px;
     height: 280px;
   }
@@ -205,17 +186,9 @@
     justify-content: center;
   }
   
-  .profile-image-placeholder {
+  .profile-image-container {
     width: 250px;
     height: 250px;
-  }
-  
-  .placeholder-text span {
-    font-size: 1rem;
-  }
-  
-  .placeholder-text small {
-    font-size: 0.8rem;
   }
 }
 
@@ -238,7 +211,7 @@
     max-width: 250px;
   }
   
-  .profile-image-placeholder {
+  .profile-image-container {
     width: 200px;
     height: 200px;
   }

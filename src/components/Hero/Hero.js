@@ -119,11 +119,12 @@ const Hero = () => {
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8, delay: 0.3 }}
           >
-            <div className="profile-image-placeholder">
-              <div className="placeholder-text">
-                <span>Profile Picture</span>
-                <small>Add your photo here</small>
-              </div>
+            <div className="profile-image-container">
+              <img 
+                src="/profile-picture.jpg" 
+                alt="Ibrahim Muhm" 
+                className="profile-image"
+              />
             </div>
           </motion.div>
         </div>
