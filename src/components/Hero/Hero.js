@@ -27,7 +27,7 @@ const Hero = () => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.2 }}
             >
-              Hi, I'm <span className="highlight">Your Name</span>
+              Hi, I'm <span className="highlight">Muhammad Ibrahim</span>
             </motion.h1>
             
             <motion.h2 
@@ -36,7 +36,7 @@ const Hero = () => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.4 }}
             >
-              Software Developer & Problem Solver
+              Software Engineer | Full Stack Developer | Problem Solver
             </motion.h2>
             
             <motion.p 
@@ -45,8 +45,10 @@ const Hero = () => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.6 }}
             >
-              Passionate about creating innovative solutions and turning ideas into reality. 
-              I specialize in full-stack development and love tackling complex challenges.
+              I build applications with strong backends and clean frontends. 
+              My work spans Java Spring Boot, React, and Python tools for data, research, and automation. 
+              I focus on shipping real projects like job trackers, fitness platforms, and research tools that people actually use.
+              I'm a quick learner and always looking for new challenges.
             </motion.p>
             
             <motion.div 
@@ -81,7 +83,7 @@ const Hero = () => {
               transition={{ duration: 0.8, delay: 1.0 }}
             >
               <motion.a
-                href="https://github.com/yourusername"
+                href="https://github.com/mibrahim250"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="social-link"
@@ -92,7 +94,7 @@ const Hero = () => {
               </motion.a>
               
               <motion.a
-                href="https://linkedin.com/in/yourusername"
+                href="https://linkedin.com/in/ibrahi12"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="social-link"
@@ -103,7 +105,7 @@ const Hero = () => {
               </motion.a>
               
               <motion.a
-                href="mailto:your.email@gmail.com"
+                href="mailto:ibrahim.muhm25@gmail.com"
                 className="social-link"
                 whileHover={{ scale: 1.2, y: -2 }}
                 whileTap={{ scale: 0.9 }}

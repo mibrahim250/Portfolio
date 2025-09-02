@@ -47,7 +47,7 @@ const About = () => {
             transition={{ duration: 0.6, delay: 0.2 }}
             viewport={{ once: true }}
           >
-            <h3>Hello! I'm Your Name</h3>
+            <h3>Hello! I'm d</h3>
             <p>
               I'm a dedicated software developer with a strong foundation in both frontend and backend technologies. 
               My journey in programming started with curiosity and has evolved into a passion for creating meaningful applications.
@@ -55,7 +55,7 @@ const About = () => {
             <p>
               When I'm not coding, you can find me exploring new technologies, contributing to open-source projects, 
               or working on personal projects that challenge my skills. I believe in the power of technology to solve 
-              real-world problems and make a positive impact.
+              real-world problems and make a positive impact. 
             </p>
             <p>
               I'm always eager to learn new things and take on challenging projects that help me grow both personally 
