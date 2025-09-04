@@ -1,10 +1,42 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { FaBriefcase, FaCalendarAlt, FaMapMarkerAlt, FaTools, FaTrophy, FaUsers } from 'react-icons/fa';
+import { FaBriefcase, FaCalendarAlt, FaMapMarkerAlt, FaTools, FaTrophy, FaUsers, FaCrown } from 'react-icons/fa';
 import './Experience.css';
 
 const Experience = () => {
   const experienceData = [
+    {
+      title: "Co-Lead HackKU Organizer",
+      company: "HackKU",
+      location: "Lawrence, KS",
+      duration: "Sep 2025 - April 2026",
+      type: "Leadership",
+      description: "Leading sponsorship outreach and partner relations for HackKU, building and qualifying pipelines, running demos and negotiating tiers, managing CRM and agreements to secure cash and in-kind support for a campus-scale hackathon.",
+      responsibilities: [
+        "Lead sponsorship outreach and partner relations, build and qualify a pipeline",
+        "Run demos and negotiate tiers, manage CRM and agreements to secure cash and in-kind support",
+        "Run agile ops with weekly standups and a kanban board, drive short sprints across logistics, marketing and tech",
+        "Keep a living runbook and on-call plan for a campus-scale hackathon",
+        "Manage event logistics and coordinate with multiple stakeholders"
+      ],
+      technologies: ["CRM Management", "Agile Operations", "Event Planning", "Partnership Development", "Project Management"]
+    },
+    {
+      title: "Retail Data Entry Specialist",
+      company: "Starbucks",
+      location: "Kansas City, MO",
+      duration: "June 2025 - Present",
+      type: "Part-time",
+      description: "Update product and fuel pricing in back office pricing software and POS systems from vendor files and manager requests, verify sync to registers and pumps and log each change.",
+      responsibilities: [
+        "Update product and fuel pricing in back office pricing software and POS systems from vendor files and manager requests",
+        "Verify sync to registers and pumps and log each change",
+        "Work daily in Modisoft back office to push price updates, print shelf labels and run basic audit reports",
+        "Ensure accurate pricing across all store systems and maintain detailed change logs",
+        "Collaborate with management to implement pricing strategies and updates"
+      ],
+      technologies: ["Modisoft", "POS Systems", "Data Entry", "Price Management", "Audit Reporting"]
+    },
     {
       title: "Target Technician",
       company: "Target Corporation",
@@ -23,35 +55,19 @@ const Experience = () => {
     },
     {
       title: "Hackathon Participant",
-      company: "Hack Midwest 2024",
+      company: "Hackathons (HackKU, Hack Midwest)",
       location: "Kansas City, MO",
-      duration: "January 2024",
+      duration: "2023-2025",
       type: "Competition",
-      description: "Participated in Hack Midwest 2024, a 24-hour hackathon focused on creating innovative solutions for real-world problems. Collaborated with a team to develop a web application that addresses community needs.",
+      description: "Frontend lead on Hob n Go built in 24 hours using React and AWS, a swipe style hobby matching app with location based discovery and a clean match flow. Added AWS user auth, S3 media storage and serverless APIs, delivered profiles cards likes and matches with a working demo.",
       responsibilities: [
-        "Developed a full-stack web application in 24 hours",
-        "Collaborated with team members on project planning and execution",
-        "Implemented responsive design and modern UI/UX principles",
-        "Presented project to judges and fellow participants",
-        "Received recognition for innovative problem-solving approach"
+        "Frontend lead on Hob n Go built in 24 hours using React and AWS",
+        "Developed a swipe style hobby matching app with location based discovery and a clean match flow",
+        "Added AWS user auth, S3 media storage and serverless APIs",
+        "Delivered profiles cards likes and matches with a working demo",
+        "Collaborated with team members on rapid prototyping and deployment"
       ],
-      technologies: ["React", "Node.js", "MongoDB", "Express.js", "Git", "Figma"]
-    },
-    {
-      title: "Hackathon Participant",
-      company: "Hack KKU 2023",
-      location: "Kansas City, MO",
-      duration: "November 2023",
-      type: "Competition",
-      description: "Competed in Hack KKU 2023, demonstrating technical skills and creativity in a collaborative environment. Built a mobile application that solves a specific community challenge.",
-      responsibilities: [
-        "Designed and developed a mobile application prototype",
-        "Worked under time constraints to deliver a functional product",
-        "Collaborated with diverse team members with different skill sets",
-        "Presented technical solution to industry professionals",
-        "Gained valuable experience in rapid prototyping and teamwork"
-      ],
-      technologies: ["React Native", "JavaScript", "Firebase", "APIs", "Mobile Development"]
+      technologies: ["React", "AWS", "S3", "Serverless APIs", "User Authentication", "Location Services"]
     }
   ];
 
@@ -84,7 +100,8 @@ const Experience = () => {
               <div className="experience-card card">
                 <div className="experience-header">
                   <div className="experience-icon">
-                    {item.type === "Competition" ? <FaTrophy /> : <FaBriefcase />}
+                    {item.type === "Competition" ? <FaTrophy /> : 
+                     item.type === "Leadership" ? <FaCrown /> : <FaBriefcase />}
                   </div>
                   <div className="experience-info">
                     <h3>{item.title}</h3>

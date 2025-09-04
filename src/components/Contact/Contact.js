@@ -8,9 +8,16 @@ const Contact = () => {
     {
       icon: <FaEnvelope />,
       title: "Email",
-      value: "your.email@gmail.com",
-      link: "mailto:your.email@gmail.com",
+      value: "ibrahim.muhm25@gmail.com",
+      link: "mailto:ibrahim.muhm25@gmail.com",
       description: "Send me an email for any inquiries or collaboration opportunities."
+    },
+    {
+      icon: <FaGithub />,
+      title: "GitHub",
+      value: "github.com/mibrahim250",
+      link: "https://github.com/mibrahim250",
+      description: "Check out my repositories and projects on GitHub."
     },
     {
       icon: <FaLinkedin />,
@@ -32,7 +39,7 @@ const Contact = () => {
     {
       icon: <FaGithub />,
       name: "GitHub",
-      url: "https://github.com/yourusername",
+      url: "https://github.com/mibrahim250",
       color: "#333"
     },
     {
@@ -44,7 +51,7 @@ const Contact = () => {
     {
       icon: <FaEnvelope />,
       name: "Email",
-      url: "mailto:your.email@gmail.com",
+      url: "mailto:ibrahim.muhm25@gmail.com",
       color: "#EA4335"
     }
   ];

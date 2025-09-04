@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import { FaGithub, FaExternalLinkAlt, FaCode, FaMobile, FaGlobe, FaDatabase } from 'react-icons/fa';
+import { FaGithub, FaExternalLinkAlt, FaCode, FaMobile, FaGlobe, FaDatabase, FaDesktop } from 'react-icons/fa';
 import './Projects.css';
 
 const Projects = () => {
@@ -9,31 +9,28 @@ const Projects = () => {
   const projectsData = [
     {
       id: 1,
-      title: "E-Commerce Platform",
-      description: "A full-stack e-commerce application with user authentication, product management, shopping cart, and payment integration. Built with modern web technologies for optimal performance and user experience.",
-      image: "https://via.placeholder.com/400x250/ff6b35/ffffff?text=E-Commerce+App",
+      title: "Job Application Tracker",
+      description: "A comprehensive job application tracking platform with filtering capabilities, status management, and application analytics. Built with React frontend, Supabase/PostgreSQL database, and Spring Boot/Java backend for analytics. Used by many users actively including me to stay organized and track application progress effectively.",
       category: "web",
-      technologies: ["React", "Node.js", "MongoDB", "Express", "Stripe"],
-      github: "https://github.com/yourusername/ecommerce-app",
-      live: "https://ecommerce-app-demo.com",
-      features: ["User Authentication", "Product Catalog", "Shopping Cart", "Payment Processing", "Admin Dashboard"]
+      technologies: ["React", "Supabase", "PostgreSQL", "Spring Boot", "Java"],
+      github: "https://github.com/mibrahim250/JobAppTracker",
+      live: "https://trackytrack.online",
+      features: ["Application Filtering", "Status Tracking", "Date Management", "Progress Analytics", "User Dashboard"]
     },
     {
       id: 2,
-      title: "Task Management App",
-      description: "A collaborative task management application with real-time updates, team collaboration features, and intuitive drag-and-drop interface. Helps teams stay organized and productive.",
-      image: "https://via.placeholder.com/400x250/ff8c42/ffffff?text=Task+Manager",
-      category: "web",
-      technologies: ["React", "Firebase", "Material-UI", "Redux", "Socket.io"],
-      github: "https://github.com/yourusername/task-manager",
-      live: "https://task-manager-demo.com",
-      features: ["Real-time Updates", "Team Collaboration", "Drag & Drop", "Progress Tracking", "File Sharing"]
+      title: "BlossomTag",
+      description: "A powerful desktop PDF annotation tool built with Python and Tkinter. Features advanced PDF annotation capabilities, keyword search, highlighting, and exportable research notes. Includes optional OCR functionality for scanned documents, making it perfect for students and professionals who need to organize and analyze PDF documents efficiently.",
+      category: "desktop",
+      technologies: ["Python", "Tkinter", "PyMuPDF", "OCR", "Windows"],
+      github: "https://github.com/mibrahim250/BlossomTag",
+      live: "https://drive.google.com/drive/u/0/folders/1ptYcy3_kA0is1Z-OwPSCgBXetvPrQSIe",
+      features: ["PDF Annotation", "Keyword Search", "OCR Support", "Export Notes", "Windows Executable"]
     },
     {
       id: 3,
       title: "Weather Dashboard",
       description: "A beautiful weather application that provides current weather conditions, forecasts, and location-based weather alerts. Features interactive maps and detailed weather analytics.",
-      image: "https://via.placeholder.com/400x250/e55a2b/ffffff?text=Weather+App",
       category: "web",
       technologies: ["JavaScript", "OpenWeather API", "Chart.js", "CSS3", "HTML5"],
       github: "https://github.com/yourusername/weather-app",
@@ -57,6 +54,7 @@ const Projects = () => {
     switch (category) {
       case 'mobile': return <FaMobile />;
       case 'backend': return <FaDatabase />;
+      case 'desktop': return <FaDesktop />;
       default: return <FaGlobe />;
     }
   };
@@ -114,37 +112,6 @@ const Projects = () => {
               transition={{ duration: 0.6, delay: 0.1 * index }}
               whileHover={{ y: -10 }}
             >
-              <div className="project-image">
-                <img src={project.image} alt={project.title} />
-                <div className="project-overlay">
-                  <div className="project-links">
-                    <motion.a
-                      href={project.github}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="project-link"
-                      whileHover={{ scale: 1.1 }}
-                      whileTap={{ scale: 0.9 }}
-                    >
-                      <FaGithub />
-                    </motion.a>
-                    <motion.a
-                      href={project.live}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="project-link"
-                      whileHover={{ scale: 1.1 }}
-                      whileTap={{ scale: 0.9 }}
-                    >
-                      <FaExternalLinkAlt />
-                    </motion.a>
-                  </div>
-                </div>
-                <div className="project-category">
-                  {getCategoryIcon(project.category)}
-                </div>
-              </div>
-
               <div className="project-content">
                 <h3>{project.title}</h3>
                 <p>{project.description}</p>
@@ -156,6 +123,29 @@ const Projects = () => {
                       <li key={idx}>{feature}</li>
                     ))}
                   </ul>
+                </div>
+
+                <div className="project-links">
+                  <motion.a
+                    href={project.github}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="project-link"
+                    whileHover={{ scale: 1.1 }}
+                    whileTap={{ scale: 0.9 }}
+                  >
+                    <FaGithub />
+                  </motion.a>
+                  <motion.a
+                    href={project.live}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="project-link"
+                    whileHover={{ scale: 1.1 }}
+                    whileTap={{ scale: 0.9 }}
+                  >
+                    <FaExternalLinkAlt />
+                  </motion.a>
                 </div>
 
                 <div className="project-technologies">

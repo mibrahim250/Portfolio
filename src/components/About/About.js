@@ -47,7 +47,7 @@ const About = () => {
             transition={{ duration: 0.6, delay: 0.2 }}
             viewport={{ once: true }}
           >
-            <h3>Hello! I'm d</h3>
+            <h3>Hello! I'm Ibrahim</h3>
             <p>
               I'm a dedicated software developer with a strong foundation in both frontend and backend technologies. 
               My journey in programming started with curiosity and has evolved into a passion for creating meaningful applications.
